@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-for i in range(1, 101):
-    if i % 15 == 0:
+
+def fizz_buzz(num):
+    if num % 15 == 0:
         print('FizzBuzz')
-    elif i % 5 == 0:
+    elif num % 5 == 0:
         print('Buzz')
-    elif i % 3 == 0:
+    elif num % 3 == 0:
         print('Fizz')
     else:
-        print(i)
+         print(num)
+
+for i in range(1, 101):
+    fizz_buzz(i)
