@@ -1,3 +1,8 @@
 #!/usr/bin/python3
-for ch in reversed(range(97, 123)):
-    print("{:c}".format(ch if (ch % 2 == 0) else (ch - 32)), end='')
+for char in range(0, 26):
+    u = ord('z') - char
+    if char % 2 == 1:
+        u = (chr(u - ord('a') + ord('A')))
+    else:
+        u = chr(u)
+    print("{}".format(u), end='')
