@@ -5,7 +5,7 @@ if __name__ == "__main__":
     arg = sys.argv
     
     if len(arg) != 4:
-        print("Usage:", arg[0], "<a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     
     oper = arg[2]
