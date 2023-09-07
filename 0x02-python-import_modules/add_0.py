@@ -2,4 +2,4 @@
 def add(a, b):
     result = a + b
     print(f"{a} + {b} = {result}")
-    return (result)
+    return result
