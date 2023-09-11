@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
-def print_reversed_list_integer(my_list=[]):
+def no_c(my_string):
+    new_str = ""
 
-    if my_list:
-        for i in reversed(my_list):
-            print('{:d}'.format(i))
+    for ch in my_string:
+        if ch not in "cC":
+            new_str += ch
+
+    return new_str
