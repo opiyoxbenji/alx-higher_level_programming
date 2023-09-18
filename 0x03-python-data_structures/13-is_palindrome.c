@@ -1,36 +1,44 @@
+#include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * is_palindrome - checks if list is a palindrome
- * @head: pointer to head
- * Return: 1 if true 0 if false
+ * is_palindrome - Checks if a linkedList is a palindrome
+ * @head: Double pointer to the head of a list
+ * Return: 0 if not else 1
  */
+
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
-	{
+	listint_t *ptr;
+	int array[3000] = {0};
+	int len = 0, r_idx = 2999;
+
+	if (head == NULL)
 		return (1);
-	}
-	return (che_pi(head, *head));
-}
-/**
- * che_pi - check if palindrome
- * @head: ptr to start
- * @last: ptr to end
- * Return: 0
- */
-int che_pi(listint_t **head, listint_t *last)
-{
-	if (last == NULL)
-	{
+
+	ptr = *head;
+
+	if (ptr == NULL || ptr->next == NULL)
 		return (1);
-	}
-	if (che_pi(head, last->next) && (*head)->n == last->n)
+
+	while (ptr != NULL)
 	{
-		*head = (*head)->next;
-		return (1);
+		array[r_idx] = ptr->n;
+		len++;
+		r_idx--;
+		ptr = ptr->next;
 	}
-	return (0);
+	ptr = *head;
+	r_idx++;
+
+	while (ptr != NULL)
+	{
+		if (ptr->n != array[r_idx])
+			return (0);
+		r_idx++;
+		ptr = ptr->next;
+	}
+
+	return (1);
 }
