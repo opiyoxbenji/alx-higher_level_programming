@@ -6,7 +6,8 @@ def magic_calculation(a, b):
         try:
             if arr > a:
                 raise Exception("Too far")
-            result += (a, b) / arr
+            else:
+                result += (a, b) / arr
         except Exception as e:
             result = b + a
             break
