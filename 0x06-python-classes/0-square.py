@@ -4,4 +4,4 @@
 
 class Square:
     """Where the square goes."""
-    pass
+        pass
