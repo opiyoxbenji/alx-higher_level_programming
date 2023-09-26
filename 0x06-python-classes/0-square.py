@@ -3,8 +3,16 @@
 class Square:
     """
     This is the Square class.
-
-    This class is defined to represent a square, even though it is currently empty.
+    It represents a square and provides a method to calculate its area.
     """
+    
+    def square_area(self, side_len):
+        """
+        Calculate the area of the square.
 
-    pass
+        :param side_len: Length of one side of the square.
+        :return: The area of the square.
+        """
+        self.side_len = side_len
+        area = self.side_len ** 2
+        return area
