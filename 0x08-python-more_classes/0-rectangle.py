@@ -3,4 +3,4 @@
 
 class Square:
     """Where the rectangle."""
-        pass
+    pass
