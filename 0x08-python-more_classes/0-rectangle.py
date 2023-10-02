@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle"""
 
-
-class Square:
+class Rectangle:
     """Where the rectangle."""
     pass
