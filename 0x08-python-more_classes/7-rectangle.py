@@ -6,6 +6,7 @@ class Rectangle:
     """Represents a rectangle"""
 
     number_of_instances = 0  # Class attribute to keep track of instances
+    print_symbol = "#"  # Class attribute for the symbol used in printing
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance"""
@@ -55,7 +56,7 @@ class Rectangle:
         """Return a string representation of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(['#' * self.__width] * self.__height)
+        return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
 
     def __repr__(self):
         """Return a string representation that can recreate the instance"""
