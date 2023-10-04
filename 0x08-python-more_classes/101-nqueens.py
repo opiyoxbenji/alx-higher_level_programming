@@ -2,14 +2,15 @@
 
 """
 File: 101-nqueens.py
-Desc: Program solves the N queens problem
+Desc: Solves the N queens problem.
 
 """
+import sys
 
 
 def init_board(n):
     """
-    Initialize an 'n'x'n' sized chessboard with 0's
+    Initialize an `n`x`n` sized chessboard with 0's.
     """
     board = []
     [board.append([]) for i in range(n)]
@@ -19,7 +20,7 @@ def init_board(n):
 
 def board_deepcopy(board):
     """
-    Return a deep copy of a chessboard
+    Return a deepcopy of a chessboard.
     """
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
@@ -28,7 +29,7 @@ def board_deepcopy(board):
 
 def get_solution(board):
     """
-    function that gets and returns the solution solved
+    This function gets and returns the solution solved.
     """
     solution = []
     for r in range(len(board)):
