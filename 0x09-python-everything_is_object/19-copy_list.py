@@ -1,3 +1,3 @@
-#!/usr/bin/python
-def copy_list(input_list):
-    return input_list.copy()
+#!/usr/bin/python3
+def copy_list(input):
+    return input.copy()
