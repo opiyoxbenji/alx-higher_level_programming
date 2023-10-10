@@ -4,5 +4,4 @@
 
 def BaseGeometry:
     """Empty class"""
-
     pass
