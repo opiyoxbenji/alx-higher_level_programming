@@ -1,14 +1,7 @@
 #!/usr/bin/python3
-"""Defines a JSON representation of an object"""
-import json
+"""Defines a Python class-to-JSON function."""
 
 
 def class_to_json(obj):
-    """Returns a dictionary description"""
-    serializable_dict = {}
-
-    for key, value in obj.__dict__.items():
-        if isinstance(value, (list, dict, str, int, bool)):
-            serializable_dict[key] = value
-
-    return serializable_dict
+    """Return the dictionary representation of a simple data structure."""
+    return obj.__dict__
