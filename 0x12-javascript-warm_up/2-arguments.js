@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let args = process.argv.slice(2);
+let args = process.argv;
 
 if (!args) {
 	console.log('No argument');
