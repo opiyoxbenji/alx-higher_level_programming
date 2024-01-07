@@ -5,9 +5,14 @@ import requests
 
 
 if __name__ == "__main__":
-    url = "https://swapi.co/api/people"
-    params = {"search": sys.argv[1]}
-    results = requests.get(url, params=params).json()
-
-    print("Number of results: {}".format(results.get("count")))
-    [print(r.get("name")) for r in results.get("results")]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    url = 'https://api.github.com/user'
+    auth = (username, password)
+    try:
+        response = requests.get(url, auth=auth)
+        response.raise_for_status()
+        user_info = response.json()
+        print(user_info['id'])
+    except requests.exceptions.HTTPError as e:
+        print(None)
