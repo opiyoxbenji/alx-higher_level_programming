@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const fs = require('fs').promises;
+const fs = require('fs');
 
-fs.writeFile(process.argv[2], process.argv[3], 'utf8')
-  .then(() => {
-    console.log('File has been written successfully.');
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+try {
+  fs.writeFile(process.argv[2], process.argv[3], 'utf8', function (err, result) { if (err) console.log(err); });
+} catch (err) {
+  console.log(err);
+}
