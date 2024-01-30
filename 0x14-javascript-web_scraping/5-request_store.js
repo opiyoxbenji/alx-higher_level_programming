@@ -5,15 +5,11 @@ const fs = require('fs');
 
 request(process.argv[2], (error, response, body) => {
   if (error) {
-    console.error('Error fetching file:', error);
-    return;
+    console.error(error);
   }
-
-  fs.writeFile(process.argv[3], body, 'utf8', (err) => {
-    if (err) {
-      console.error('Error writing file:', err);
-    } else {
-      console.log('File written successfully!');
-    }
-  });
+  try {
+    fs.writeFile(process.argv[3], body, 'utf8', function (err, result) { if (err) console.log(err); });
+  } catch (err) {
+    console.log(err);
+  }
 });
